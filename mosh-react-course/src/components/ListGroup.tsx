@@ -1,8 +1,11 @@
 import { useState } from "react";
 
-function ListGroup() {
-  let items = ["New york", "San Francisco", "Tokyo", "Rajshahi", "London"];
+interface Props {
+  items: string[];
+  heading: string;
+}
 
+function ListGroup({ items, heading }: Props) {
   //Hook
   const [selectedInedx, setSelectedIndex] = useState(-1);
 
@@ -12,7 +15,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {getMessage()}
       <ul className="list-group">
         {items.map((item, index) => (
