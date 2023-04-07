@@ -1,26 +1,15 @@
 import { useState } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
+import ListGroup from "./components/ListGroup";
 
 function App() {
-  const [showAlert, setShowAlert] = useState(false);
-  const handleOnClick = () => {
-    setShowAlert(true);
-  };
-
-  const handleOnClose = () => {
-    setShowAlert(false);
-  };
+  const items = ["Dhaka", "Rajshahi", "Ctg"];
   return (
     <div>
-      {showAlert && (
-        <Alert onClose={handleOnClose}>
-          Hello <span>World</span>
-        </Alert>
-      )}
-      <Button color="success" onClick={handleOnClick}>
-        Press me please
-      </Button>
+      <ListGroup
+        items={items}
+        heading="Bangladesh"
+        onSelectItem={() => {}}
+      ></ListGroup>
     </div>
   );
 }
