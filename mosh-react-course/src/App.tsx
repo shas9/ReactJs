@@ -10,9 +10,7 @@ function App() {
   });
 
   const handleClick = () => {
-    const toppingsArray = pizza.toppings;
-    toppingsArray.push("Cheese");
-    setPizza({ ...pizza, toppings: toppingsArray });
+    setPizza({ ...pizza, toppings: [...pizza.toppings, "cheese"] });
   };
   return (
     <div>
