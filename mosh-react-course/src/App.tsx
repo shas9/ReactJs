@@ -1,4 +1,4 @@
-import Like from "./components/Like/Like";
+import Like from "./components/Like";
 
 function App() {
   const items = ["Dhaka", "Rajshahi", "Ctg"];
