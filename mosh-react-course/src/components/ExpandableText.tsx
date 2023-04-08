@@ -6,16 +6,20 @@ interface Props {
 }
 
 const ExpandableText = ({ maxLength = 100, children }: Props) => {
-  const [isShowingFullText, setShowTextStatus] = useState(true);
+  const [isExpanded, setExpandedStatus] = useState(true);
+
+  if (children.length <= maxLength) return <p>{children}</p>;
+
+  const text = isExpanded ? children : children.substring(0, maxLength) + "...";
   return (
     <div>
-      {isShowingFullText ? children : children.substring(0, maxLength) + "..."}{" "}
+      <p>{text}</p>
       <button
         onClick={() => {
-          setShowTextStatus(!isShowingFullText);
+          setExpandedStatus(!isExpanded);
         }}
       >
-        {isShowingFullText ? "Less" : "More"}
+        {isExpanded ? "Less" : "More"}
       </button>
     </div>
   );
