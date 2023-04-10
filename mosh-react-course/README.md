@@ -1,2 +1,3 @@
-# E-Sysmark
-E-Commerce project for "Sysmark Ltd"
+# Ultimate React Course:
+
+Course Link: https://codewithmosh.com/p/ultimate-react-part1
