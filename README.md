@@ -1,2 +1,2 @@
-# E-Sysmark
-E-Commerce project for "Sysmark Ltd"
+# React 
+Learning React with typescript and vite
