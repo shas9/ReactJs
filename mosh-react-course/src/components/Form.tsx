@@ -23,7 +23,7 @@ const Form = () => {
         <input ref={nameRef} id="name" type="text" className="form-control" />
       </div>
       <div className="mb-3">
-        <label htmlFor="age" className="form-labl">
+        <label htmlFor="age" className="form-label">
           Age
         </label>
         <input ref={ageRef} id="age" type="number" className="form-control" />
