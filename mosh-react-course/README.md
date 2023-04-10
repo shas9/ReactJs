@@ -36,7 +36,37 @@ npm create vite@4.1.0
 npm i bootstrap@5.2.3
 ```
 
-### Compiles and minifies for production
+### Installing Styled Components
 ```
-npm run build
+npm i @types/styled-components
+```
+
+### Installing React Icons
+```
+npm i react-icons@4.7.1 
+```
+
+### Installing Immer
+```
+npm i immer@9.0.19
+```
+
+### Installing React-hook-form
+```
+npm i react-hook-form@7.43
+```
+
+### Installing Zod
+```
+npm i @hookform/resolvers@2.9.11
+```
+
+### Installing Hookform Resolvers
+```
+npm i @hookform/resolvers@2.9.11
+```
+
+### Compiles and minifies for development
+```
+npm run dev
 ```
