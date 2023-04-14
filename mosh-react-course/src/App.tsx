@@ -1,34 +1,19 @@
-import { useEffect, useRef, useState } from "react";
-import ProductList from "./expense-tracker/components/ProductList";
+import React, { useEffect } from "react";
+
+const connect = () => {
+  console.log("Connecting");
+};
+
+const disconnect = () => {
+  console.log("Disconnecting");
+};
 
 const App = () => {
-  const ref = useRef<HTMLInputElement>(null);
-  const [category, setCategory] = useState("");
-
-  //afterRender
   useEffect(() => {
-    if (ref.current) ref.current.focus();
+    connect();
+    return () => disconnect();
   });
-
-  useEffect(() => {
-    document.title = "My App";
-  });
-
-  return (
-    <div>
-      <select
-        className="form-select"
-        onChange={(event) => {
-          setCategory(event.target.value);
-        }}
-      >
-        <option value=""></option>
-        <option value="Clothing">Clothing</option>
-        <option value="Household">Household</option>
-      </select>
-      <ProductList category={category} />
-    </div>
-  );
+  return <div>App</div>;
 };
 
 export default App;
